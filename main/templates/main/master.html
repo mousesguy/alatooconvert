@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Master
+{% endblock %}
+ 
+{% block file %}
+    <form method="post">
+        {% csrf_token %}
+        <p><input type="file" multiple="multiple"></p>
+        <button type="submit" class = "btn btn-success">Send</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
